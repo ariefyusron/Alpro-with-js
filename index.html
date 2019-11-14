@@ -9,12 +9,24 @@
 <body>
   
   <script>
-    const username = 120
-    if(username % 2 === 0){
-      console.log('genap')
-    } else {
-      console.log('ganjil')
+    const jam = 3
+    const duaJamPertama = 5000
+    const perjam = 1000
+    let hargaTotal = 0
+    let count = true
+
+    for (let i = 1; i <= jam; i++) {
+      if(i <= 2){
+        if(count === true){
+          hargaTotal = hargaTotal + duaJamPertama
+          count = false
+        }
+      } else {
+        hargaTotal = hargaTotal + perjam
+      }
     }
+
+    console.log(hargaTotal)
   </script>
 </body>
 </html>
